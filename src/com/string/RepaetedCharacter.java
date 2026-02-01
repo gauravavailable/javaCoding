@@ -2,7 +2,7 @@ package com.string;
 
 public class RepaetedCharacter {
     public static void main(String[] args) {
-        String s1="Developerr";
+        String s1="javadev";
         String s2="";
         while (s1.length()>0){
             char c=s1.charAt(0);

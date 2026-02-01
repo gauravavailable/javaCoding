@@ -16,7 +16,5 @@ public class SolidPyramid {
             star+=2;
             System.out.println();
         }
-
-
     }
 }

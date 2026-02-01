@@ -11,7 +11,7 @@ public class HollowPyramid {
                 for (int j = 1; j <= star; j++) {
                     if (j==1||j==star){
                     System.out.print("*");
-                }else{
+                    } else{
                 System.out.print(" ");
             }
             }

@@ -17,9 +17,11 @@ public class QuickSort {
         sort(a, start, j);
         sort(a, i, end);
     }
+
     public static void main(String[] args) {
         int[] a = {10, 12, 5, 86, 78, 5, 0, 2};
         System.out.println(Arrays.toString(a));
         sort(a, 0, a.length - 1);
         System.out.println(Arrays.toString(a));
     }
+}
