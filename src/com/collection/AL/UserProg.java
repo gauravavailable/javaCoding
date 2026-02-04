@@ -1,4 +1,4 @@
-package com.collection;
+package com.collection.AL;
 
 public class UserProg {
     public static void main(String[] args) {

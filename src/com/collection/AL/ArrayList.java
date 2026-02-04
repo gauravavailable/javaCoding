@@ -1,4 +1,4 @@
-package com.collection;
+package com.collection.AL;
 
 public class ArrayList {
     Object[] o = new Object[10];
