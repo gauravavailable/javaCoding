@@ -1,0 +1,91 @@
+<------------------------------------@ Exception Handling @------------------------------------------------>
+--> Exception is a interruption it will occur during running programme.
+--> When exception occurs in a program of normal termination will happened.
+--> We can handled the exception those keyword:-
+====> try-catch
+====> throw
+====> throws
+====> finally
+
+======================================================================================================
+
+Exception Handled:-  Exception handling is a mechanism which is user to continue the flow of the execution.
+
+Error:-
+--> Error are syntax mistakes done by the programmer.
+--> In java we can't handled the error , we have to debug the error.
+
+In java all exception are classes.
+
+======================================================================================================
+
+                                         Throwable
+                                             |
+                                             |
+     ________________________________________|_______________________________
+     |                                                                      |
+  Runtime Exception                                             -> ClassNotFound --
+ -> Arithmetic exception  ----                                  -> FileNotFound  -- CheckedException
+ -> ArrayIndexOutOfBond   ----                                  -> Interrupted   --
+ -> StringIndexOutOfBond  ----  UncheckedException              -> Input/Output  --
+ -> NullPointer           ----
+ -> ClassCast             ----
+ -> NumberFormat          ----
+
+======================================================================================================
+try:-
+--> try is the keyword which is user to handled the exception.
+--> in try block we will declared which lines are responsible for exception.
+--> try block is always associated with catch block.
+--> one try block can have multiple catch block.
+--> while declaring multiple catch blocks we have to followed the order sub type to super type.
+======================================================================================================
+catch block:-
+--> catch block is keyword which is user to handled the exception.
+--> catch block is always associated with try block.
+--> if any exception occurs in try block then only catch block is execute.
+--> catch block is user to provide alternate solution for exception.
+--> after declaring exception type catch block we should not declare any other catch block
+which is sub type of exception.
+======================================================================================================
+finally block:-
+--> finally is a keyword which is user to handled the exception.
+--> finally bock will be handled in every time if exception is handled or not.
+--> finally block is user to write costly resources.
+--> we can write the finally block ---- try-finally; try-catch-finally.
+--> finally block will be execute before executing the return statement.
+======================================================================================================
+Checked Exception:-
+--> which exception are not subclasses of runtime exception class those exception are called as checked
+exception.
+--> checked exception also known as compiler known exception.
+--> compiler will force to handled checked exception.(handling is mandatory for checked exception)
+--> exception propagation is explicit for checked exception.
+--> Example:- FileNotFoundException , CloneNotSupportException
+======================================================================================================
+Unchecked Exception:-
+--> which exception are subclasses of runtime exception class those exception are called as
+unchecked exception.
+--> unchecked exception also known as compiler unknown exception.
+--> compiler will not force to handled unchecked exception.
+--> exception propagation is implicit for unchecked exception.
+--> Example:- ArithmeticException, ClassCastException , ArrayIndexOutOfBondException
+======================================================================================================
+Default Exception Handling:-
+--> if programmer failed to handled the exception , JVM will handled the exception by terminating the
+current execution these is called Default Exception Handling.
+======================================================================================================
+Exception Propagation:-
+--> passing an exception to its caller method is called as Exception Propagation.
+--> Unchecked exception are Propagated implicitly.
+--> we can propagate checked exception by using throws keyword.
+--> Propagation is mandatory for unhandled checked exception.
+======================================================================================================
+throw:-
+--> throw is a keyword which is user to throw the exception.
+--> by using throw keyword we can throw only one exception at a time.
+======================================================================================================
+throws:-
+--> throws is a keyword which is user to propagate the exception.
+--> by using throws keyword we can declared multiple exception.
+======================================================================================================

@@ -1,0 +1,165 @@
+<--------------------------------------Collection Framework--------------------20/02/26--------------->
+
+Collection:-
+--> Collection is a group of data in a single unit.
+=====================================================================================================
+Framework:-
+--> Framework is a Readme architecture which contains built classes and interface.
+=====================================================================================================
+Q. why we need collection framework?
+--> To overcome the disadvantages of an array we need collection framework.
+=====================================================================================================
+Q. Differences between array and collection?
+Array:-
+--> Array has a fixed size.
+--> Array can only Homogenous typed data.
+--> Array  doesn't  have any in-built function.
+--> Array doesn't support Generic.
+=====================================================================================================
+Collection:-
+--> Collection has a dynamic size.
+--> Collection can stored both Heterogeneous and Homogenous type of data.
+--> Collection have built-in function.
+--> Collection supports Generic.
+=====================================================================================================
+
+   *********************************Collection Framework Diagram*****************************
+
+methods:-
+--> add
+--> addAll
+--> remove
+--> removeAll
+--> contains
+--> containsAll
+--> size
+--> clear
+--> iterator
+=====================================================================================================
+List:-
+--> List is a sub interface of collection interface.
+--> List introduced jdk 1.2 available in java.util package.
+--> List will allow to stored duplicate element.
+--> List preserved(follow) the insertion order.
+--> List will allow to stored multiple null values.
+-->List having implementation some class those classes are:-
+* ArrayList
+* Vector
+* Stack
+* Linked list
+
+                 new Arraylist()
+        List l = new LinkedList()
+                 new Stack()
+                 new vector() n
+=====================================================================================================
+==> ArrayList:-
+--> ArrayList is implementing sub classes of List interface.
+--> ArrayList introduced jdk 1.2 available in java.util package.
+--> ArrayList initial capacity is 10 and incremental capacity is (50%) of its previous size.
+--> ArrayList implemented by using resizeable or growable array.
+--> ArrayList implements clonable, serializable and randomAccess interfaces.
+--> ArrayList follow the insertion order & it will allow to stored duplicate and null values.
+--> *** ArrayList having 3 overloaded constructor.
+================================================================================21/02/26=============
+==> Vector:-
+--> Vector is implementing subclasses of List interface.
+--> Vector introduced in JDK 1.0 and available in java.util package.
+--> Vector default initial capacity is 10 and incremental capacity is double (100%) of its previous
+size (if capacityIncrement not specified).
+--> Vector implemented by using resizable or growable array.
+--> Vector implements List, RandomAccess, Cloneable, Serializable interfaces.
+--> Vector methods are synchronized methods (thread-safe).
+--> Vector follows insertion order & it allows storing duplicate and null values.
+--> Vector is legacy class (introduced before Collections framework).
+--> *** Vector having 4 overloaded constructors.
+
+🔹 Constructors of Vector
+
+1️⃣ Vector()
+👉 Creates vector with default capacity 10
+
+2️⃣ Vector(int initialCapacity)
+👉 Creates vector with specified initial capacity
+
+3️⃣ Vector(int initialCapacity, int capacityIncrement)
+👉 Creates vector with specified initial capacity and increment value
+
+4️⃣ Vector(Collection<? extends E> c)
+👉 Creates vector containing elements of given collection.
+
+=====================================================================================================
+==**> Stack:-
+--> Stack is a subclass of Vector class.
+--> Stack introduced in JDK 1.0 and available in java.util package.
+--> Stack follows LIFO (Last In First Out) principle.
+--> Stack is implemented using resizable or growable array (because it extends Vector).
+--> Stack methods are synchronized (thread-safe).
+--> Stack allows storing duplicate and null values.
+--> Stack follows insertion order.
+--> Stack is also considered a legacy class.
+=====================================================================================================
+==> Linked List:-
+--> LinkedList is implementing subclasses of List and Deque interfaces.
+--> LinkedList introduced in JDK 1.2 and available in java.util package.
+--> LinkedList is implemented using Doubly Linked List data structure.
+--> LinkedList does not have initial capacity concept (no resizing like ArrayList).
+--> LinkedList allows storing duplicate and null values.
+--> LinkedList follows insertion order.
+--> LinkedList is not synchronized (not thread-safe).
+--> LinkedList implements List, Deque, Cloneable, Serializable interfaces.
+--> LinkedList is better for insertion and deletion operations compared to ArrayList.
+--> *** LinkedList having 2 constructors.
+
+🔹 Constructors of LinkedList
+
+1️⃣ LinkedList()
+👉 Creates an empty LinkedList
+
+2️⃣ LinkedList(Collection<? extends E> c)
+👉 Creates LinkedList containing elements of given collection.
+=====================================================================================================
+Q. Situation to used ArrayList?
+--> ArrayList is suitable to used for search and data retrieving operation, bcz an arraylist
+search operation happen based n index values.
+--> ArrayList is not suitable for deleting and adding, bcz it hs shifting operation.
+=====================================================================================================
+Q. Situation to used LinkedList?
+--> LinkedList is suitable to used adding and deleting data in between, bcz linked list don't
+have any shift operation.
+--> LinkedList is not suitable for search and data retrieving operation, bcz searching
+always start from head node.
+================================================================================23/02/26=============
+Generic:-
+--> Generic are the features which is used to define which type of data can be stored in a collection.
+--> Generic introduced in JDK 1.5
+--> By using Generic we can archived type specification.
+--> By using Generic we can archived unnecessary down casting.
+--> If we not specify any Generic the default generic type is Object.
+--> By using Generic we can archived parametrized collection.
+=====================================================================================================
+Queue:-
+--> Queue is a sub interface of Collection interface.
+--> Queue introduced in JDK 1.2 and available in java.util package.
+--> Queue follows FIFO (First In First Out) principle.
+--> Queue allows storing duplicate and null values.
+--> Queue having some implementing sub classes like that:-
+* ArrayDeque
+* Priority Queue
+=====================================================================================================
+Q. Difference between Queue and Deque?
+Queue:-
+--> Queue is a sub interface of collection interface.
+--> Queue is a single ended.
+--> We can add & fetch the element only from one ended.
+Deque:-
+--> Deque is a sub interface of queue interface.
+--> Deque is a double ended.
+--> We can add & fetch the element from both sides.
+=====================================================================================================
+
+
+
+
+
+

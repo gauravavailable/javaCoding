@@ -1,0 +1,138 @@
+===========================================JSP================================24/02=============
+
+JSP :-
+--> JSP is java server page, it is used to create dynamic web pages,
+it runs inside a servlet container like apache and tomcat.
+
+JSP lifecycle:-
+==> Translation Phase:-
+--> JSP file is converted into servlet java file, the servlet container translates JSP into
+servlet source code.
+
+==> Compilation Phase:-
+--> Generated. java file is compile to .class file.
+
+==> Class Loading:-
+--> compiled servlet class is loaded into JVM.
+
+==> Instantization:-
+--> Object of servlet class is created.
+
+==> Initialization:-
+--> The servlet containers calls INIT() in servlet.
+
+==> Request Processing:-
+--> for every request service method is called, it is called multiple times based on the no of request.
+
+==> Destruction:-
+--> when server shut down destroyed method is called once, that is used to release the resources.
+
+Advantages of JSP:-
+--> easy to create dynamic web pages.
+--> Its provides built-in implicit Objects.
+--> It is automatic servlet conversion.
+--> It works well with servlet containers.
+
+
+Drawbacks of JSP:-
+--> Mixing business logic with presentation layer.
+--> we can write java code inside JSP.
+--> It is not good for large scale application, bcz it is difficult to manage the complex logic & it violets
+separation of concern.
+--> Debugging is hard:- JPS converts to servlet internally hence error some time confusing.
+--> Performance delay bcz first tym JSP is accessed , translation, compilation, hence slightly delay occurs.
+--> It is not modern approach,  Bcz today we use TimeLift, RestAPI, & frontend framework like react and angular.
+
+==> Declaration tag:-
+--> <%! int a = 10; %>
+-->	<%! public string demo()
+    {
+    return "hii";
+	} %>
+
+==> Expression tag:-
+
+--> <% = a %>
+--> <% = demo() %>
+==> Scriptlet tag:-
+--> <% String user = request.getParameter("user"); %>
+--> <% request.setAttribute("user","Gaurav"); %>
+==> Directive Tag:-
+--> <% @page ("page directive")
+--> <% @page ("include directive")
+--> <% @tag lib URL = "-----------"(library)
+==> JSP Action tags
+--> <JSP:format ="  ">
+--> <JSP: input = "   ">
+=====================================================================================================
+
+===========================================HIBERNATE================================24/02=============
+
+JPA:- Java Persistence API.
+ORM:- Object Relational Mapping.
+
+Advantages Of Hibernate:-
+--> Reduced Boilerplate code
+--> Open source
+--> Mapping
+--> Automatic Table creation
+--> Alternative for JDBC
+--> No need Exception Handling
+--> Improved Performance(Cache mechanism   --first level mechanism -- second level mechanism)
+--> HQL/JPQL
+--> Transaction management
+--> ORM tool.
+
+==> Hibernate:-
+--> Hibernate is a ORM java framework which is used to map java object to database tables.
+
+==> Rules of Entity Class:-
+--> The class should be public and non abstract.
+--> All the fields should be private, hence getter and setter should be generated.
+--> The class should have default constructor/zero parametrized constructor.
+--> the class should implement serializable interface.
+--> The class should contain one primary key.
+
+Example 1:-
+@Entity
+public class School {
+    @Id
+    private int sid;
+    private String sname;
+    private rank ;
+
+    School school = new School();
+    school.setSid(123);
+    school.setName(DAV);
+    school.setRank(1st);
+
+
+Example 2:-
+@Entity
+public class Library {
+    @Id
+    private int bookId;
+    private String bookName;
+    private book;
+
+
+==================================Life Cycle(Hibernate)=========================09/03============
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

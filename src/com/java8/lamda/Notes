@@ -1,0 +1,231 @@
+===========================================JAVA 8==============================04/03===============
+Q. What is Lambda Function/Expression?
+--> Lambda expression in java 8 is a short way to implement a functional interface.
+--> It helps to reduce the no of lines of code & makes code more readable.
+
+
+Q. Why we should use lambda?
+--> Before java 8 we used anonymous inner classes.
+--> In which we would write more code or separate implementation class should be created.
+--> These is the reason lambda was introduced to reduce code and improve readability.
+
+Syntax:-
+( )->{body};
+
+--> Lambda function is used to achieve functionally programming & to avoid anonymous classes or Object.
+
+Q. What is functional Programming?
+--> Passing functionality to a method parameter is called as functional Programming.
+-->
+
+==> Types of
+Java 8 will provide pre-defined Interface such as:-
+--> * Predicate:-
+--> * Consumer
+--> * Function
+--> * Suppiler
+--> * pipredicate
+--> * Bifunction
+--> * Biconsumer
+--> * Unary Operator
+__ * Binary Operator
+
+================================================================================05/03/26=============
+==> Predicate<T>:-
+--> It is a functional interface provides by java 8 in java.util package.
+--> It takes one input and returns boolean value, it is used for condition or filtering.
+
+Example:-
+Predicate<Integer> pr = num -> num % 2 == 0;
+        System.out.println(pr.test(1));
+
+=====================================================================================================
+
+==> Consumer<>:-
+--> It is a functional interface provides by java 8 in java.util package.
+--> It takes 1 input & returns nothing i.e, return types is void.
+--> It is used to consume a data.
+
+Example:-
+ Consumer<String> consumer = System.out::println;
+        consumer.accept("Hello");
+
+=====================================================================================================
+==> Function<T,R>:-
+--> It is a functional interface provides by java 8 in java.util package.
+--> It takes 1 input and return 1 output value.
+
+Example:-
+unction<String, Integer> func = String::length;
+        System.out.println(func.apply("abc"));
+
+
+=====================================================================================================
+==> Suppiler<T>:-
+-->It is a functional interface provides by java 8 in java.util package.
+--> It doesn't have any argument but it return some value.
+
+Example:-
+Supplier<String> supplier = () -> "hello";
+        System.out.println(supplier.get());
+=====================================================================================================
+==> BiPredicate<T, U>
+--> It is a functional interface provides by java 8 in java.util package.
+--> It takes 2 input & returns a boolean values
+
+Example:-
+BiPredicate<String, String> biPre = (str1, str2) -> str1.equals(str2);
+        System.out.println(biPre.test("a", "a"));
+=====================================================================================================
+==> BiConsumer<T, U>:-
+--> It is a functional interface provides by java 8 in java.util package.
+--> It take 2 input and doesn't return anything i.e, return type is void.
+
+Example:-
+ BiConsumer<String, String> biConsumer = (a,b)->{};
+        biConsumer.accept("a","b");
+=====================================================================================================
+==> BiFunction<T ,U, R>:-
+--> It is a functional interface provides by java 8 in java.util package.
+--> It takes 2 input and returns 1 output.
+
+
+Example:-
+BiFunction<String, String, String> biFunction = (str1, str2) -> str1 + str2;
+
+
+================================================================================06/03/26=============
+Q. WAP to check even no are present or not in a integer array?
+==> import java.util.function.Predicate;
+    public class Demo1 {
+        public static void main(String[] args) {
+            int arr[] = {2,5,7,3,4,8};
+            for(int a:arr){
+                Predicate<Integer> predicate=i->a%2==0;
+                System.out.println(predicate.test(a));
+            }
+        }
+    }
+=====================================================================================================
+Q. WAP to check odd no are present or not in a integer array?
+
+ import java.util.function.Predicate;
+    public class Demo1 {
+        public static void main(String[] args) {
+            int arr[] = {2,5,7,3,4,8};
+            for(int a:arr){
+                Predicate<Integer> predicate=i->a%2!=0;
+                System.out.println(predicate.test(a));
+            }
+        }
+    }
+=====================================================================================================
+Q. WAP to check given no is palindrome or not?
+
+import java.util.function.Predicate;
+public class Demo1 {
+    public static void main(String[] args) {
+        Predicate<Integer> predicate = x -> {
+            int rev = 0;
+            int temp = x;
+            while (temp % 10 != 0) {
+                rev = rev * 10 + (temp % 10);
+                temp = temp/10;
+            }
+            return x == rev;
+            };
+        System.out.println(predicate.test(121));
+        }
+    }
+
+=====================================================================================================
+==>  UnaryOperator<T>:-
+--> It is a special type of interface which takes one input and gives one output
+but the input type and output type will be same.
+--> It is a special type of function functional interface.
+
+Example:-
+public class Demo1 {
+    public static void main(String[] args) {
+        UnaryOperator<Integer> operator = x -> x * x;
+        System.out.println(operator.apply(25)); // 625
+    }
+}
+
+=====================================================================================================
+==> BinaryOperator<T,T>:-
+--> It is a special type of bifunction(Functional interface) it takes 2 input and returns the same things.
+-->
+
+Example:-
+import java.util.function.BinaryOperator;
+public class Demo1 {
+    public static void main(String[] args) {
+        BinaryOperator<Integer> op = (a,b)->{return a+b;};
+        System.out.println(op.apply(4,5));
+    }
+}
+
+=====================================================================================================
+Q. forEach():-
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Demo1 {
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<>();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        list.add(50);
+
+        list.forEach(a->System.out.println(a));
+    }
+}
+
+
+=====================================================================================================
+--> When while iterating collection or list if we try to modified the collection it will through
+concurrent modification exception, to overcome that's we can use iterator or removeIf().
+
+==> removeIf():- removes all the element from it collection if its satisfied the given predicate function.
+
+
+===========================================STREAM API======================================10/03======
+==> Stream Api:-
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=====================================================================================================
+
+
+
+

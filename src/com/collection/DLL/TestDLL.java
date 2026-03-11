@@ -1,4 +1,5 @@
 package com.collection.DLL;
+import java.util.List;
 
 public class TestDLL {
     public static void main(String[] args) {
@@ -7,14 +8,11 @@ public class TestDLL {
 
         list.add(10);
         list.add(20);
+        list.add(25);
         list.add(30);
 
-        System.out.println("Forward:");
-        list.displayForward();
-
-        System.out.println("Backward:");
-        list.displayBackward();
-
         System.out.println("Size: " + list.size());
+
+
     }
 }

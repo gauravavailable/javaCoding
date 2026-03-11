@@ -1,0 +1,225 @@
+
+===========================================GIT=======================================================
+==> version control system :-
+--> version control system is a software which will track the changes of source code and save them as multiple version
+whenever developer modifies the code.
+--> It is divides into 3 types:-
+** Local version control system
+** Centralized version control system
+** Distributed version control system
+
+Local version control system:-
+It is software which will save all the version of the code in local system of a developer.
+
+==> Drawback of Local version control system:-
+--> If Local system fails then developer loose the data.
+--> No collaboration.
+Software :- Revision Control System & Source Control System.
+
+
+==> Centralized version control system:-
+--> Centralized version control system Which will save all the version of the code in a Centralized place
+where all the developers can collaborate with each others.
+Software:- SubVersion & ConCurrent Version Control System.
+
+==> Drawback of Centralized version control system:-
+--> Internet Mandatory.
+--> If central server is failed then developer loose the code.
+
+Distributed version control system:-
+--> Distributed version control system which will save all the version of the code in both version control system.
+
+Software:- GIT(2005) , Mercurial ,  Bazaar
+
+GIT: Global information Tracker.(Introduced:- Linus Torvalds)
+--> It is open sources .
+
+GIT WORKFLOW / WORKING STAGES OF GIT:-
+********************* Diagram *********************
+
+Project Folder --> Working Directory(Untracked Area) --> Stagging Area(Imaginary/Temp area) --> Local Repository[.git]--> Remote Repo
+                    (All files Operation)                      (F1.java f2.java)                  (All Code Versions)    (GITHUB,GITLAB,BITBUCKET)
+                    (f1.java f2.java)
+
+* git init
+* git add file
+* git add file1 file2
+* git add .
+* git add *. extension(java)
+* git config user.name " "
+* git config user.email " "
+* git commit -m"" :- all files
+* git commit filename -m""
+
+
+CMD:-
+git init
+git status -:- will show status of file
+
+// Otional:-
+// git config --global user.email " "
+// git config --global user.name " "
+
+git log :- how many commit i will do it.
+
+** add the first tym local repo to github:-
+Local repo --> Remote repo
+git remote add <alias> url
+git push alias branchName
+git remote -v
+
+==> Branching:-
+--> A branch is a part of main repo where multiple dev. work on diff features of the same project.
+
+ 5 types of branches:-
+ * main/master branch
+ * features branch
+ * Release branch
+ * Develop branch
+ * hotfix branch
+
+==> main/master branch:- A branch which production code is available.
+==> features branch:- A branch is a place where multiple developer can work on a single branch, so each dev. work on 1 feautres branch.
+==> Release branch:- A branch user to fixed the bugs without release the production.
+==> Develop branch:- A branch is user to combine 2 diff branches code into a single branch to test the code & integration.
+==> hotfix branch :- fixing the bug in the production.
+
+command of branching:-
+** git branch :- list of branches
+** git branch feature1 :- create a new branch
+** git branch
+** git switch features1 :- switch the branch
+** git checkout -b features2 :- create and switch to the new features branch
+** ls :- copy the code
+** git switch master
+** git branch --list
+** git switch features1
+** git push origin feature1
+** git switch master
+** git branch -d features1 :- delete branch
+** git push origin -d feature1
+** git switch feature2
+** git branch -m new :- rename the feature name
+
+==> Merging:-
+--> copying 1 branch commit to another branch is called merging.
+--> 2 types of merging:-
+** 2-way merging (Fast-Forward merge)
+** 3-way merging (ORT)
+
+==> 2-way merging:-
+--> git merge branchName
+
+==> 3-way merging:-
+--> merge commit
+
+--> ORT Strategy:-
+*** ostensibly recursive twin
+
+command of merging:-
+** git branch
+** git switch new
+** git git add.
+** git commit -m"newFile"
+** git push origin new
+** git switch master
+** ls
+** git merge new(fast forward)
+** git log
+** git switch new
+** ls
+** git status
+** git add.
+** git commit -m"modified"
+** git switch status
+** git add.
+** git commit -m"master file"
+** git merge new
+** ctrl + esc WQ
+** ls
+**
+
+==> Rebase:-
+--> rebase is alternate for merge which will not create any merge commits will merging the branches.
+--> It follows a linear format of commit history.(Single line commit from top to bottom).
+     A -- B -- C -- F -- d -- E
+--> Rebase maintain clean commit history.
+Command:-
+--> git checkout feature-login
+--> git rebase main
+
+
+==> merge commit:-
+-->
+-->
+
+==> Merge Conflict:-
+--> when a common file is modifying a common file in both the branches and when a user is trying to merge the branches
+git raises merge conflict.
+
+==> Undoing changes:-
+--> command:-
+** git checkout / git restore
+** git reset
+** git revert
+** git rm (remove)
+** git reflog
+
+--> git checkout or restore is used toh remove the changes to in working directory.
+** git checkout filename
+** git restore filename
+** git checkout .
+** git restore .
+
+--> if u want to back the file from staging area to working directory we can use
+** git reset filename
+
+--> To delete the latest commit undo to get a file to local repo. to staging area.
+** git reset --soft Head~1
+
+-->  To delete the latest commit undo to get a file to local repo. to Working directory.
+** git reset --mixed Head~1
+
+--> To delete the latest commit undo to remove the modification of the file.
+** git reset --hard Head~1
+
+==> RESET:-
+--> Reset is used form only local changes, it won't support any changes.
+--> reset doesn't maintain any commit history.
+
+==> REVERT:-
+--> revert commit is user to delete a particular commit and stores the commit history.
+--> command:-
+** git revert commitID
+
+==> Remove:-
+--> to delete a particular file we will use git rm filename.
+** git rm filename
+
+==> Reflog:- reflog will show the list of commit including deleted commits.
+** git reflog
+
+==> return back to reflog
+** git cherry-pick commit
+
+==> changing the msg of the latest commit:-
+** git commit --amend -m " "
+
+==> clone will copy a remote repo to local system .
+** git clone url(repo url)
+
+==> fetch :- git fetch will take or copy remote branches to local repo.
+** git fetch alias
+
+==> pull:- git pull will take or copy the code changes to remote to local repo. pull is also called  fetch + merge.
+**  get pull alias branchName
+
+==> hidden branch to show
+** git branch -a
+
+==>
+
+
+
+
+
